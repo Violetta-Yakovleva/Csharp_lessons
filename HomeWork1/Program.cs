@@ -27,26 +27,43 @@
 // 44 5 78 -> 78
 // 22 3 9 -> 22
 
-Console.Write("Введите первое целое число: ");
-int num1 = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите первое целое число: ");
+// int num1 = Convert.ToInt32(Console.ReadLine());
 
-Console.Write("Введите второе целое число: ");
-int num2 = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите второе целое число: ");
+// int num2 = Convert.ToInt32(Console.ReadLine());
 
-Console.Write("Введите третье целое число: ");
-int num3 = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите третье целое число: ");
+// int num3 = Convert.ToInt32(Console.ReadLine());
 
-if(num1 > num2 & num1 > num3)
-{
-    Console.WriteLine($"Максимальное число {num1}");
-}
+// if(num1 > num2 & num1 > num3)
+// {
+//     Console.WriteLine($"Максимальное число {num1}");
+// }
 
-else if(num2 > num1 & num2 > num3)
-{
-    Console.WriteLine($"Максимальное число {num2}");
-}
+// else if(num2 > num1 & num2 > num3)
+// {
+//     Console.WriteLine($"Максимальное число {num2}");
+// }
 
+// else
+// {
+//     Console.WriteLine($"Максимальное число {num3}");
+// }
+
+
+
+// Задача 4. Напишите программу, которая на вход принимает число и выдаёт, является ли число чётным (делится ли оно на два без остатка).
+
+// 4 -> да
+// -3 -> нет
+// 7 -> нет
+
+Console.Write("Введите целое число: ");
+int num = Convert.ToInt32(Console.ReadLine());
+
+if(num % 2 == 0)
+// % - остаток от деления числа, если число делится на два ровно, то остаток от деления будет равен нулю, если остаток равен 1,то число - нечетное
+    Console.WriteLine($"Число {num} является четным");
 else
-{
-    Console.WriteLine($"Максимальное число {num3}");
-}
+    Console.WriteLine($"Число {num} является нечетным");
