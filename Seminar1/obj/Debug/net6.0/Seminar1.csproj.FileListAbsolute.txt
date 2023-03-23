@@ -1,0 +1,15 @@
+D:\УЧЕБА GB\C#\Morning_seminar1\Seminar1\bin\Debug\net6.0\Seminar1.exe
+D:\УЧЕБА GB\C#\Morning_seminar1\Seminar1\bin\Debug\net6.0\Seminar1.deps.json
+D:\УЧЕБА GB\C#\Morning_seminar1\Seminar1\bin\Debug\net6.0\Seminar1.runtimeconfig.json
+D:\УЧЕБА GB\C#\Morning_seminar1\Seminar1\bin\Debug\net6.0\Seminar1.dll
+D:\УЧЕБА GB\C#\Morning_seminar1\Seminar1\bin\Debug\net6.0\Seminar1.pdb
+D:\УЧЕБА GB\C#\Morning_seminar1\Seminar1\obj\Debug\net6.0\Seminar1.csproj.AssemblyReference.cache
+D:\УЧЕБА GB\C#\Morning_seminar1\Seminar1\obj\Debug\net6.0\Seminar1.GeneratedMSBuildEditorConfig.editorconfig
+D:\УЧЕБА GB\C#\Morning_seminar1\Seminar1\obj\Debug\net6.0\Seminar1.AssemblyInfoInputs.cache
+D:\УЧЕБА GB\C#\Morning_seminar1\Seminar1\obj\Debug\net6.0\Seminar1.AssemblyInfo.cs
+D:\УЧЕБА GB\C#\Morning_seminar1\Seminar1\obj\Debug\net6.0\Seminar1.csproj.CoreCompileInputs.cache
+D:\УЧЕБА GB\C#\Morning_seminar1\Seminar1\obj\Debug\net6.0\Seminar1.dll
+D:\УЧЕБА GB\C#\Morning_seminar1\Seminar1\obj\Debug\net6.0\refint\Seminar1.dll
+D:\УЧЕБА GB\C#\Morning_seminar1\Seminar1\obj\Debug\net6.0\Seminar1.pdb
+D:\УЧЕБА GB\C#\Morning_seminar1\Seminar1\obj\Debug\net6.0\Seminar1.genruntimeconfig.cache
+D:\УЧЕБА GB\C#\Morning_seminar1\Seminar1\obj\Debug\net6.0\ref\Seminar1.dll
