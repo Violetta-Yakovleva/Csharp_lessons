@@ -30,26 +30,46 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
-int ThirdDigit (int num)
-{
-    while(num >=1000)
-    {
-        num = num / 10;
-    }
-    return num % 10;
-}
+// int ThirdDigit (int num)
+// {
+//     while(num >=1000)
+//     {
+//         num = num / 10;
+//     }
+//     return num % 10;
+// }
    
 
-Console.WriteLine("Введите число и я покажу тебе его третью цифру: ");
-int num = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите число и я покажу тебе его третью цифру: ");
+// int num = Convert.ToInt32(Console.ReadLine());
 
-if(num < 100)
+// if(num < 100)
+// {
+//     Console.WriteLine("Вы ввели слишком маленькое число, введите трехзначное и более."); 
+// }
+// else
+// {
+//     Console.Write("Третья цифра введенного числа: ");
+//     Console.Write(ThirdDigit (num));
+// }
+
+
+
+// Задача 3. Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
+// 6 -> да
+// 7 -> да
+// 1 -> нет
+
+
+bool Weekend(int numday)
 {
-    Console.WriteLine("Вы ввели слишком маленькое число, введите трехзначное и более."); 
-}
-else
-{
-    Console.Write("Третья цифра введенного числа: ");
-    Console.Write(ThirdDigit (num));
+    if(numday >5 && numday < 1)
+    return true;
+    else
+    return false;
 }
 
+Console.WriteLine("Введите цифру, обозначающую день недели, и я подскажу, является ли он выходным: ");
+int day = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine(Weekend(day));
