@@ -27,9 +27,31 @@
 // else Console.WriteLine("Число не является пятизначным, повторите ввод.");
 
 
-// !!!УНИВЕРСАЛЬНОЕ решение для любого числа!!!
+// Универальное решение для любого числа
 
+// bool Palindrome(int number)
+// {
+//      int number1 = number;
+//      int reversNumber = 0;
+        
+//     while(number1 > 0)
+//     {
+//         int lastDigit = number1 % 10;
+//         reversNumber = reversNumber * 10 + lastDigit;
+//         number1 = number1 / 10;
+//     }
 
+//     if(number == reversNumber) return true;
+//     else return false;
+// }
+
+// Console.Write("Введите число: ");
+// int number = Convert.ToInt32(Console.ReadLine());
+
+// if(Palindrome(number) == true)
+// Console.WriteLine("Число является палиндромом");
+// else 
+// Console.WriteLine("Число не является палиндромом");
 
 
 
