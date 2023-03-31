@@ -63,14 +63,12 @@
 
 bool Weekend(int numday)
 {
-    if(numday <= 5 && numday >=1)
-    return false;
-    else
-    return true;
+    if(numday == 6 && numday == 7) return true;
+    else return false;
 }
 
 Console.WriteLine("Введите цифру, обозначающую день недели, и я подскажу, является ли он выходным: ");
-int day = Convert.ToInt32(Console.ReadLine());
+int numday = Convert.ToInt32(Console.ReadLine());
 
-
-Console.WriteLine(Weekend(day));
+if(Weekend(numday) == true) Console.WriteLine("Да, день является выходным");
+else Console.WriteLine("День не является выходным");
