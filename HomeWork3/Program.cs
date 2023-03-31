@@ -56,7 +56,7 @@
 
 
 
-// Задача 2. Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
+// // Задача 2. Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
 
 // double Lenght(double x1, double y1, double z1, double x2, double y2, double z2)
 // {
@@ -70,19 +70,19 @@
 
 // Console.WriteLine("Введите координаты первой точки в трехмерном пространстве");
 // Console.Write("Координата X: ");
-// double x1 = Convert.ToInt32(Console.ReadLine());
+// double x1 = Convert.ToDouble(Console.ReadLine());
 // Console.Write("Координата Y: ");
-// double y1 = Convert.ToInt32(Console.ReadLine());
+// double y1 = Convert.ToDouble(Console.ReadLine());
 // Console.Write("Координата Z: ");
-// double z1 = Convert.ToInt32(Console.ReadLine());
+// double z1 = Convert.ToDouble(Console.ReadLine());
 
 // Console.WriteLine("Введите координаты второй точки в трехмерном пространстве");
 // Console.Write("Координата X: ");
-// double x2 = Convert.ToInt32(Console.ReadLine());
+// double x2 = Convert.ToDouble(Console.ReadLine());
 // Console.Write("Координата Y: ");
-// double y2 = Convert.ToInt32(Console.ReadLine());
+// double y2 = Convert.ToDouble(Console.ReadLine());
 // Console.Write("Координата Z: ");
-// double z2 = Convert.ToInt32(Console.ReadLine());
+// double z2 = Convert.ToDouble(Console.ReadLine());
 
 // Console.Write("Расстояние между заданными точками равняется: ");
 // Console.Write(Math.Round(Lenght(x1, y1, z1, x2, y2, z2), 2));
