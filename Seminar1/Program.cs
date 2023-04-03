@@ -201,4 +201,106 @@
 
 
 
+// Семинар 4.
+// Напишите программу, которая принимает на вход число (А) и выдаёт сумму чисел от 1 до А. (for или while)
 
+// int GetSum(int num)
+// {
+//     int sum = 0;
+//     for (int i = 1; i <= num; i++)
+//             sum = sum + i;
+//     return sum;
+// }
+    
+    // int i = 1;
+    // while(i <= num)
+    // {
+    //     sum = sum + i;
+    //     i++;
+    // }
+
+// Console.WriteLine("Введите число: ");
+// int a = Convert.ToInt32(Console.ReadLine());
+
+// int result = GetSum(a);
+// Console.WriteLine($"Сумма чисел от 1 до {a} это {result}");
+
+
+
+// Задача 2. Напишите программу, которая принимает на вход число и выдаёт количество цифр в числе.
+
+// int CountNum(int num)
+// {
+//     int total = 0;
+//     // int trash = 0;
+
+//     while(num > 0)
+//     {
+//         total++;
+//         num = num / 10;
+//     }
+//     return total;
+// }
+
+// Console.Write("Введите число: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+
+// Console.WriteLine($"Цифр в числе {num} {CountNum(num)}");
+
+
+// Задача 3. Напишите программу, которая принимает на вход число N и выдаёт произведение чисел от 1 до N.
+
+
+// int MultNum(int num)
+// {
+//     int total = 1;
+//     for (int i = 1; i <= num; i++)
+//     {
+//         total = total * i;
+//     }
+//     return total;
+// }
+
+// Console.Write("Введите число: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+
+// Console.WriteLine($"Факториал числа {num} = {MultNum(num)}");
+
+
+
+
+// Генерируем массив
+
+// int[] CreateRandomArray(int size, int minValue, int maxValue)
+// {
+//     int[] array = new int[size];
+
+//     for(int i = 0; i < size; i++)
+//     {
+//         array[i] = new Random().Next(minValue, maxValue + 1);
+//     }
+//     return array;
+// }
+
+
+//Вывод массива
+
+// void ShowArray(int[] array)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         Console.Write(array[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
+
+// Console.Write("Введите размер массива: ");
+// int size = Convert.ToInt32(Console.ReadLine());
+
+// Console.Write("Ведите минимальное значение: ");
+// int min = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Ведите максимальное значение: ");
+// int max = Convert.ToInt32(Console.ReadLine());
+
+// int[] newArray = CreateRandomArray(size, min, max);
+// ShowArray(newArray);
