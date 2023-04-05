@@ -60,24 +60,33 @@ Console.WriteLine($"Сумма цифр введенного числа {a} ра
 
 /*Задача 3. Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
-6, 1, 33 -> [6, 1, 33]*/
+6, 1, 33 -> [6, 1, 33]
 
 
-/*int[] CreateYourArray(int size)
+int[] CreateArray(int size)
 {
+    int[] array = new int[size];
 
+    for(int i = 0; i < size; i++)
+    {
+        Console.Write($"Введите {i+1}ое число массива: ");
+        int num = Convert.ToInt32(Console.ReadLine());
+        array[i] = num;
+    }
+    return array;
 }
 
-
-void ShowArray(int[] array)
+void ShowArraay(int[] array)
 {
-
+    for(int i = 0; i < array.Length; i++)
+    {
+        Console.Write(array[i] + " ");
+    }
+    Console.WriteLine();
 }
 
 Console.Write("Введите размер массива: ");
-int sizeArray = Convert.ToInt32(Console.ReadLine());*/
+int size = Convert.ToInt32(Console.ReadLine());
 
-
-
-
-
+int[] yourArray = CreateArray(size);
+ShowArraay(yourArray);*/
