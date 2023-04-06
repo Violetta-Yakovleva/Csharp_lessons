@@ -304,3 +304,133 @@
 
 // int[] newArray = CreateRandomArray(size, min, max);
 // ShowArray(newArray);
+
+
+/*Семинар 5.
+Задайте массив из 12 элементов, заполненный случайными числами из промежутка [-9, 9]. Найдите сумму отрицательных элементов массива.*/
+
+// Генерируем массив
+
+// int[] CreateRandomArray(int size, int minValue, int maxValue)
+// {
+//     int[] array = new int[size];
+
+//     for(int i = 0; i < size; i++)
+//     {
+//         array[i] = new Random().Next(minValue, maxValue + 1);
+//     }
+//     return array;
+// }
+
+
+// // Вывод массива
+
+// void ShowArray(int[] array)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         Console.Write(array[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
+
+// Console.Write("Введите размер массива: ");
+// int size = Convert.ToInt32(Console.ReadLine());
+
+// Console.Write("Ведите минимальное значение: ");
+// int min = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Ведите максимальное значение: ");
+// int max = Convert.ToInt32(Console.ReadLine());
+
+// int[] GetNegativeNumbers(int[] array)
+// {
+//     int sum = 0;
+
+//     for(int i = 0; i <= 0; i++)
+//     {
+//         if(array[i] < 0)
+//             sum += array[i]; // sum = sum + array[i]
+//     return sum;
+//     }
+// }
+
+// int[] newArray = CreateRandomArray(size, min, max);
+// ShowArray(newArray);
+
+// int result = GetNegativeNumbers(newArray);
+// Console.WriteLine($"Сумма отрицат. чисел равняется {result}");
+
+
+// Задача 2. Напишите программу замена элементов массива: положительные элементы замените на соответствующие отрицательные, и наоборот.
+
+// int[] ReNum(int[] array)
+// {
+//     for(int i =0; i < array.Length; i++) 
+//         array[i] = array[i] * (-1);
+//     return array;
+// }
+
+
+
+
+// Задача 3. Напишите программу, которая определяет, присутствует ли заданное число в массиве.
+
+// bool YourNum(int[] array, int num)
+// {
+//     for(int i =0; i < array.Length; i++)
+//     {
+//         if(array[i] == num)
+//             return true; 
+//     }
+//     return false;
+// }
+         
+            
+        
+  
+  
+
+// Задача 4.Задайте одномерный массив из m случайных чисел. Найдите количество элементов массива, значения которых лежат в отрезке [a,b].
+
+
+// int[] CreateRandomeArray(int size, int min, int max)
+// {
+//     int[] array = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         array[i] = new Random().Next(min, max + 1);
+//     }
+//     return array;
+// }
+
+// int SearchNum(int[] array, int a, int b)
+// {
+//     int total = 0;
+//     for(int i = 0; i < array.Length; i++)
+//     {
+//         if(array[i] >= a && array[i] <= b)         
+//             total ++;
+//     }
+//     return total;
+// }
+
+// void ShowArray(int[] array)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         Console.Write(array[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
+
+// int[] newArray = CreateRandomeArray(10, 1, 100);
+// ShowArray(newArray);
+
+// Console.WriteLine(SearchNum(newArray, 10, 40));
+
+
+
+
+//Найдите произведение пар чисел в одномерном массиве. Парой считаем первый и последний элемент, 
+//второй и предпоследний и т.д. Результат запишите в новом массиве.
+
