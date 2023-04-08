@@ -32,10 +32,10 @@ int[] newArray = CreateRandomArray(size);
 ShowArray(newArray);
 
 int result = QuantityEvenNumbers(newArray);
-Console.WriteLine($"Количество четных чиссел в массиве равняется {result}");*/
+Console.WriteLine($"Количество четных чиссел в массиве равняется {result}");
 
 
-/*Задача 2: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
+Задача 2: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
 [3, 7, 23, 12] -> 19
 [-4, -6, 89, 6] -> 0
 
@@ -78,18 +78,17 @@ int[] newArray = CreateRandomArray(size, min, max);
 ShowArray(newArray);
 
 int result = Summ(newArray);
-Console.WriteLine($"Сумма элементов, стоящих в массиве на нечетных позициях, равняется {result}");*/
+Console.WriteLine($"Сумма элементов, стоящих в массиве на нечетных позициях, равняется {result}");
 
 
-/*Задача 3. Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
+Задача 3. Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
 [3 7 22 2 78] -> 76
 
 
 double[] CreateRandomArray(int size, int min, int max)
 {
     double[] array = new double[size];
-    for(int i = 0; i < size; i++)
-        array[i] = Math.Round((new Random().Next(min, max + 1) + new Random().NextDouble()), 2);
+    for(int i = 0; i < size; i++) array[i] = Math.Round((new Random().Next(min, max + 1) + new Random().NextDouble()), 2);
     return array;
 }
 
@@ -104,14 +103,17 @@ double DiffMaxMin(double[] array)
 {
     double max1 = array[0];
     double min1 = array[0];
-    double diff = max1 - min1;    
-    
+        
     for (int i = 0; i < array.Length; i++)
     {
-        if(array[i] < min1) min1 = array[i];
-        else if(array[i] > max1) max1 = array[i];
+        if(array[i] < min1) 
+            min1 = array[i];
+        else if(array[i] > max1) 
+            max1 = array[i];
     }
-    return diff;
+
+    double diff = max1 - min1;
+    return Math.Round(diff, 2);
 }
 
 Console.Write("Введите размер массива: ");
@@ -124,11 +126,11 @@ int max = Convert.ToInt32(Console.ReadLine());
 double[] newArray = CreateRandomArray(size, min, max);
 ShowArray(newArray);
 
-double result = Math.Round(DiffMaxMin(newArray), 2);
-Console.WriteLine($"Разница между MAX и MIN значениями элементов массива равняется {result}");*/
+double result = DiffMaxMin(newArray);
+Console.WriteLine($"Разница между MAX и MIN значениями элементов массива равняется {result}");
 
 
-/*Задача с семинара. Найдите произведение пар чисел в одномерном массиве. Парой считаем первый и последний элемент, 
+Задача с семинара. Найдите произведение пар чисел в одномерном массиве. Парой считаем первый и последний элемент, 
 второй и предпоследний и т.д. Результат запишите в новом массиве.
 
 int[] CreateRandomArray(int size, int min, int max)
@@ -166,4 +168,3 @@ int max = Convert.ToInt32(Console.ReadLine());
 int[] newArray = CreateRandomArray(size, min, max);
 ShowArray(newArray);
 MultiplyArray(newArray);*/
-
