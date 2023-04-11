@@ -147,7 +147,7 @@
 //     if (x < 0 && y > 0) return 2;
 //     if (x < 0 && y < 0) return 3;
 //     if (x > 0 && y < 0) return 4;
-    
+
 //     return -1;
 // }
 
@@ -211,13 +211,13 @@
 //             sum = sum + i;
 //     return sum;
 // }
-    
-    // int i = 1;
-    // while(i <= num)
-    // {
-    //     sum = sum + i;
-    //     i++;
-    // }
+
+// int i = 1;
+// while(i <= num)
+// {
+//     sum = sum + i;
+//     i++;
+// }
 
 // Console.WriteLine("Введите число: ");
 // int a = Convert.ToInt32(Console.ReadLine());
@@ -384,11 +384,11 @@
 //     }
 //     return false;
 // }
-         
-            
-        
-  
-  
+
+
+
+
+
 
 // Задача 4.Задайте одномерный массив из m случайных чисел. Найдите количество элементов массива, значения которых лежат в отрезке [a,b].
 
@@ -431,6 +431,139 @@
 
 
 
-//Найдите произведение пар чисел в одномерном массиве. Парой считаем первый и последний элемент, 
-//второй и предпоследний и т.д. Результат запишите в новом массиве.
+//Семинар 6.
+//Напишите программу, которая перевернёт одномерный массив 
+//(последний элемент будет на первом месте, а первый - на последнем и т.д.)
+
+
+// int[] CreateRandomeArray(int size, int min, int max)
+// {
+//     int[] array = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         array[i] = new Random().Next(min, max + 1);
+//     }
+//     return array;
+// }
+
+// void ShowArray(int[] array)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         Console.Write(array[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
+
+// void ReverseArray(int[] array)
+// {
+//     for (int left = 0, right = array.Length - 1; left < right; left++, right--)
+//     {
+//         int temp = array[left];
+//         array[left] = array[right];
+//         array[right] = temp;
+//     }
+// }
+
+// int[] myArray = {1, 2, 3, 4, 5};
+// int[] superArray = myArray;
+// ReverseArray(myArray);
+
+// for (int i = 0; i < myArray.Length; i++)
+// {
+//     Console.WriteLine(myArray + " ");
+// }
+
+
+//Задача 1.  Напишите программу, которая принимает на вход три числа и проверяет, может ли существовать треугольник с сторонами такой длины.
+
+// bool Triangle (double a, double b, double c)
+// {
+//     if (a + b > c && b + c > a && c + a > b)
+//         return true;
+//     else return false;
+// }
+
+// Console.Write("Введите длину первой стороны треугольника: ");
+// double a = Convert.ToDouble(Console.ReadLine());
+// Console.Write("Введите длину второй стороны треугольника: ");
+// double b = Convert.ToDouble(Console.ReadLine());
+// Console.Write("Введите длину третьей стороны треугольника: ");
+// double c = Convert.ToDouble(Console.ReadLine());
+
+// if (Triangle(a, b, c) == true)
+//     Console.WriteLine("Такой треугольник существует");
+// else
+//     Console.WriteLine("Такого треугольника не существует");
+
+//****Console.WriteLine(Triangle(a, b, c));
+
+
+
+// Задача 2. Не используя рекурсию, выведите первые N чисел Фибоначчи. Первые два числа Фибоначчи: 0 и 1.
+
+//f(n)=f(n-1)+f(n-2)
+
+// int[] Fibonacci(int a1, int a2, int n)
+// {
+//     int[] array = new int[n];
+//     array[0] = a1;
+//     array[1] = a2;
+
+//     for (int i = 2; i < n; i++)
+//         array[i] = array[i - 1] + array[i - 2];
+//     return array;
+// }
+
+// void ShowArray(int[] array)
+// {
+//     for (int i = 0; i < array.Length; i++) Console.Write(array[i] + " ");
+//     Console.WriteLine();   
+// }
+
+// Console.Write("Введите число, чтобы вывести числа Фибоначчи: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Первое число Фибоначчи равняется: ");
+// int a1 = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Второе число Фибоначчи равняется: ");
+// int a2 = Convert.ToInt32(Console.ReadLine());
+
+// int[] myArray = Fibonacci(a1, a2, n);
+// ShowArray(myArray);
+
+
+
+// Задача 3. Напишите программу, которая будет создавать копию заданного массива с помощью поэлементного копирования.
+
+// int[] CopyArray(int[] array)
+// {
+//     int[] newArray = new int[array.Length];
+//     for(int i = 0; i < array.Length; i++)
+//         newArray[i] = array[i];
+//     return newArray;
+// }
+
+
+//Задача с **. Напишите программу, которая будет преобразовывать десятичное число в двоичное.
+
+//s = n % 2 + s
+//n = n/2
+
+string ConvertToByte(int n)
+{
+    string s = string.Empty;
+    while(n >= 2)
+    {
+        s = s + n % 2;
+        n = n / 2;
+    }
+    s = n + s;
+    return s;
+}
+
+Console.Write("Введите число десятичной системы исчисления, которое нужно перевести в двоичную: ");
+int n = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine(ConvertToByte(n));
+
 
