@@ -496,7 +496,7 @@
 // else
 //     Console.WriteLine("Такого треугольника не существует");
 
-//****Console.WriteLine(Triangle(a, b, c));
+// ****Console.WriteLine(Triangle(a, b, c));
 
 
 
@@ -546,24 +546,90 @@
 
 //Задача с **. Напишите программу, которая будет преобразовывать десятичное число в двоичное.
 
-//s = n % 2 + s
-//n = n/2
+// string ConvertToByte(int n)
+// {
+//     string s = string.Empty;
+//     while (n >= 2)
+//     {
+//         s = n % 2 + s;
+//         n = n / 2;
+//     }
+//     s = n + s;
+//     return s;
+// }
+// Console.Write("Введите n: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// Console.Write(ConvertToByte(n));
 
-string ConvertToByte(int n)
+
+
+// Семинар 7.
+// Задача 1. Задайте двумерный массив размером m×n, заполненный случайными целыми числами.
+
+
+int[,] CreateRandom2DArray()
 {
-    string s = string.Empty;
-    while(n >= 2)
-    {
-        s = s + n % 2;
-        n = n / 2;
-    }
-    s = n + s;
-    return s;
+    Console.Write("Введите количество строк: ");
+    int rows = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Введите количество столбцов: ");
+    int columns = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Введите минимальное значение: ");
+    int minValue = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Введите максимальное значение: ");
+    int maxValue = Convert.ToInt32(Console.ReadLine());
+
+    int[,] array = new int[rows, columns];
+
+    for(int i = 0; i < rows; i++)
+        for(int j = 0; j < columns; j++)
+            array[i,j] = new Random().Next(minValue, maxValue+ 1);
+
+    return array;
 }
 
-Console.Write("Введите число десятичной системы исчисления, которое нужно перевести в двоичную: ");
-int n = Convert.ToInt32(Console.ReadLine());
+void Show2DArray(int[,] array)
+{
+    for(int i = 0; i < array.GetLength(0); i++)
+    {
+        for(int j = 0; j < array.GetLength(1); j++)
+        {
+            Console.Write(array[i,j] + " ");
+        }
+        Console.WriteLine();
+    }
+    Console.WriteLine();
+}
 
-Console.WriteLine(ConvertToByte(n));
 
+int[,] myArray = CreateRandom2DArray();
+Show2DArray(myArray);
+
+
+//Задача 2. Задайте двумерный массив размера m на n, каждый элемент в массиве находится 
+//по формуле: Aij = i+j. Выведите полученный массив на экран. 
+// метод генерирующий, должен появиться новый массив в итоге
+
+int[,] Array2D(int)
+
+
+
+
+
+
+
+
+//Задача 3. Задайте двумерный массив. Найдите элементы, у которых оба индекса чётные, и замените эти элементы на их квадраты.
+// ссылочный тип данных
+
+
+
+
+
+
+
+
+//Задача 4. Задайте двумерный массив. Найдите сумму элементов, находящихся на главной диагонали (с индексами (0,0); (1;1) и т.д.
+// матрица мб любого размера
+//можено рещить без вложенных циклов
+//аналитич
 
