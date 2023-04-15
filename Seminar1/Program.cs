@@ -558,78 +558,195 @@
 //     return s;
 // }
 // Console.Write("Введите n: ");
-// int n = Convert.ToInt32(Console.ReadLine());
-// Console.Write(ConvertToByte(n));
+// // int n = Convert.ToInt32(Console.ReadLine());
+// // Console.Write(ConvertToByte(n));
 
 
 
-// Семинар 7.
-// Задача 1. Задайте двумерный массив размером m×n, заполненный случайными целыми числами.
+// // Семинар 7.
+// // Задача 1. Задайте двумерный массив размером m×n, заполненный случайными целыми числами.
 
 
-int[,] CreateRandom2DArray()
-{
-    Console.Write("Введите количество строк: ");
-    int rows = Convert.ToInt32(Console.ReadLine());
-    Console.Write("Введите количество столбцов: ");
-    int columns = Convert.ToInt32(Console.ReadLine());
-    Console.Write("Введите минимальное значение: ");
-    int minValue = Convert.ToInt32(Console.ReadLine());
-    Console.Write("Введите максимальное значение: ");
-    int maxValue = Convert.ToInt32(Console.ReadLine());
+// int[,] CreateRandom2DArray()
+// {
+//     Console.Write("Введите количество строк: ");
+//     int rows = Convert.ToInt32(Console.ReadLine());
+//     Console.Write("Введите количество столбцов: ");
+//     int columns = Convert.ToInt32(Console.ReadLine());
+//     Console.Write("Введите минимальное значение: ");
+//     int minValue = Convert.ToInt32(Console.ReadLine());
+//     Console.Write("Введите максимальное значение: ");
+//     int maxValue = Convert.ToInt32(Console.ReadLine());
 
-    int[,] array = new int[rows, columns];
+//     int[,] array = new int[rows, columns];
 
-    for(int i = 0; i < rows; i++)
-        for(int j = 0; j < columns; j++)
-            array[i,j] = new Random().Next(minValue, maxValue+ 1);
+//     for(int i = 0; i < rows; i++)
+//         for(int j = 0; j < columns; j++)
+//             array[i,j] = new Random().Next(minValue, maxValue+ 1);
 
-    return array;
-}
+//     return array;
+// }
 
-void Show2DArray(int[,] array)
-{
-    for(int i = 0; i < array.GetLength(0); i++)
-    {
-        for(int j = 0; j < array.GetLength(1); j++)
-        {
-            Console.Write(array[i,j] + " ");
-        }
-        Console.WriteLine();
-    }
-    Console.WriteLine();
-}
+// void Show2DArray(int[,] array)
+// {
+//     for(int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for(int j = 0; j < array.GetLength(1); j++)
+//         {
+//             Console.Write(array[i,j] + " ");
+//         }
+//         Console.WriteLine();
+//     }
+//     Console.WriteLine();
+// }
 
 
-int[,] myArray = CreateRandom2DArray();
-Show2DArray(myArray);
+// int[,] myArray = CreateRandom2DArray();
+// Show2DArray(myArray);
 
 
 //Задача 2. Задайте двумерный массив размера m на n, каждый элемент в массиве находится 
 //по формуле: Aij = i+j. Выведите полученный массив на экран. 
-// метод генерирующий, должен появиться новый массив в итоге
+//*метод генерирующий, должен появиться новый массив в итоге
 
-int[,] Array2D(int)
+// int[,] Create2DArray(int rows, int columns)
+// {
+//     int[,] array = new int[rows, columns];
+//     for (int i = 0; i < array.GetLength(0); i++)
+//         for (int j = 0; j < array.GetLength(1); j++)
+//             array[i, j] = i + j;
+//     return array;
+// }
 
+// void Show2DArray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//             Console.Write(array[i, j] + " ");
+//         Console.WriteLine();
+//     }
+//     Console.WriteLine();
+// }
 
+// Console.Write("Введите число строк: ");
+// int rows = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите число столбцов: ");
+// int columns = Convert.ToInt32(Console.ReadLine());
 
-
-
+// int[,] newArray = Create2DArray(rows, columns);
+// Show2DArray(newArray);
 
 
 
 //Задача 3. Задайте двумерный массив. Найдите элементы, у которых оба индекса чётные, и замените эти элементы на их квадраты.
-// ссылочный тип данных
+//*ссылочный тип данных
 
+// int[,] CreateRandom2DArray(int rows, int columns, int min, int max)
+// {
+//     int[,] array = new int[rows, columns];
+//     for(int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for(int j = 0; j < array.GetLength(1); j++)
+//             array[i, j] = new Random().Next(min, max + 1);
+//     }
+//     return array;
+// }
 
+// void Show2DArray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//             Console.Write(array[i, j] + " ");
+//         Console.WriteLine();
+//     }
+//     Console.WriteLine();
+// }
 
+// void FindEvenIndex(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             if (i == j)
+//                 array[i, j] *= array[i, j];
+//         }
+//     }
+// }
 
+// Console.Write("Введите число строк: ");
+// int rows = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите число столбцов: ");
+// int columns = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите минимальное значение: ");
+// int min = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите максимальное значение: ");
+// int max = Convert.ToInt32(Console.ReadLine());
 
+// int[,] newArray = CreateRandom2DArray(rows, columns, min, max);
+// Show2DArray(newArray);
+// FindEvenIndex(newArray);
+// Show2DArray(newArray);
 
 
 
 //Задача 4. Задайте двумерный массив. Найдите сумму элементов, находящихся на главной диагонали (с индексами (0,0); (1;1) и т.д.
-// матрица мб любого размера
-//можено рещить без вложенных циклов
-//аналитич
+//матрица мб любого размера
+//*можено рещить без вложенных циклов
+//*аналитическийи метод
 
+// int[,] CreateRandom2DArray(int rows, int columns, int min, int max)
+// {
+//     int[,] array = new int[rows, columns];
+//     for(int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for(int j= 0; j < array.GetLength(1);j++)
+//         {
+//             array[i, j] = new Random().Next(min, max + 1);
+//         }
+//     }
+//     return array;
+// }
+
+// void Show2DArray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//             Console.Write(array[i, j] + " ");
+//         Console.WriteLine();
+//     }
+//     Console.WriteLine();
+// }
+
+// int ReturnSumDigit(int[,] array)
+// {
+//     int sum = 0;
+//     for(int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for(int j = 0; j < array.GetLength(1); j++)
+//         {
+//             if(i ==j)
+//             {
+//                 sum += array[i,j];
+//             }
+//         }
+//     }
+//     return sum;
+// }
+
+// Console.Write("Введите число строк: ");
+// int rows = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите число столбцов: ");
+// int columns = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите минимальное значение: ");
+// int min = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите максимальное значение: ");
+// int max = Convert.ToInt32(Console.ReadLine());
+
+// int[,] newArray = CreateRandom2DArray(rows, columns, min, max);
+// Show2DArray(newArray);
+// int result = ReturnSumDigit(newArray);
+// Console.WriteLine($"Сумма элементов, находящихся на главной диагонали, равна {result}.");
