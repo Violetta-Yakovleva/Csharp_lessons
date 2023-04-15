@@ -750,3 +750,55 @@
 // Show2DArray(newArray);
 // int result = ReturnSumDigit(newArray);
 // Console.WriteLine($"Сумма элементов, находящихся на главной диагонали, равна {result}.");
+
+
+
+// *Решение вторым способом* - только когда rows=columns???????
+
+// int[,] CreateRandom2DArray(int rows, int columns, int min, int max)
+// {
+//     int[,] array = new int[rows, columns];
+//     for(int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for(int j= 0; j < array.GetLength(1);j++)
+//         {
+//             array[i, j] = new Random().Next(min, max + 1);
+//         }
+//     }
+//     return array;
+// }
+
+// void Show2DArray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//             Console.Write(array[i, j] + " ");
+//         Console.WriteLine();
+//     }
+//     Console.WriteLine();
+// }
+
+// int ReturnSumDigit(int[,] array)
+// {
+//     int sum = 0;
+//     for(int i = 0; i < array.GetLength(0) || i < array.GetLength(1); i++)
+//     {
+//         sum += array[i, i];
+//     } 
+//     return sum;
+// }
+
+// Console.Write("Введите число строк: ");
+// int rows = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите число столбцов: ");
+// int columns = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите минимальное значение: ");
+// int min = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите максимальное значение: ");
+// int max = Convert.ToInt32(Console.ReadLine());
+
+// int[,] newArray = CreateRandom2DArray(rows, columns, min, max);
+// Show2DArray(newArray);
+// int result = ReturnSumDigit(newArray);
+// Console.WriteLine($"Сумма элементов, находящихся на главной диагонали, равна {result}.");
