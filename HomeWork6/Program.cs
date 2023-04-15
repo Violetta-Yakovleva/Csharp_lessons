@@ -2,6 +2,8 @@
 0, 7, 8, -2, -2 -> 2
 1, -7, 567, 89, 223 -> 4*/
 
+// *С использованием массива*
+
 // Console.Write("Укажите, сколько чисел хотите ввести: ");
 // int n = Convert.ToInt32(Console.ReadLine());
 // int[] array = new int[n];
@@ -25,6 +27,27 @@
 
 // int result = PositiveNumbers(array);
 // Console.Write($"{result} чисел из введенных больше 0.");
+
+
+// *Без использования масива*
+
+// int PositiveNumbers(int num)
+// {
+//     int total = 0;
+//     for (int i = 0; i < num; i++)
+//     {
+//         Console.Write($"Введите {i+1}-е число: ");
+//         int num2 = Convert.ToInt32(Console.ReadLine());
+//         if(num2 > 0)
+//             total++;
+//     }
+//     return total;
+// }
+
+// Console.Write("Количество чисел, которое будет введено: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+
+// Console.WriteLine($"Вами было введено {PositiveNumbers(num)} чисел(-ла) больше 0.");
 
 
 
