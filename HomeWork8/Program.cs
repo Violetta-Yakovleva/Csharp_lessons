@@ -115,7 +115,7 @@
 //     {
 //         minRow += array[0, i];
 //     }
-    
+
 //     int minSumRow = 0;
 //     for (int i = 0; i < array.GetLength(0); i++)
 //     {
@@ -144,75 +144,68 @@
 // 18 20
 // 15 18
 
-Console.WriteLine("Введите количество строк первой матрицы: ");
-int rows1 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите количество столбцов первой матрицы: ");
-int columns1 = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите минимальное значение: ");
-int minValue = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите максимальное значение: ");
-int maxValue = Convert.ToInt32(Console.ReadLine());
+// int[,] CreateRandom2DArray()
+// {
+//     Console.WriteLine("Введите данные матрицы");
+//     Console.Write("Введите количество строк: ");
+//     int rows = Convert.ToInt32(Console.ReadLine());
+//     Console.Write("Введите количество столбцов: ");
+//     int columns = Convert.ToInt32(Console.ReadLine());
+//     Console.Write("Введите минимальное значение: ");
+//     int minValue = Convert.ToInt32(Console.ReadLine());
+//     Console.Write("Введите максимальное значение: ");
+//     int maxValue = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("Введите количество строк второй матрицы: ");
-int rows2 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите количество столбцов второй матрицы: ");
-int columns2 = Convert.ToInt32(Console.ReadLine());
+//     int[,] array = new int[rows, columns];
 
+//     for(int i = 0; i < rows; i++)
+//         for(int j = 0; j < columns; j++)
+//             array[i,j] = new Random().Next(minValue, maxValue+ 1);
 
-int[,] array1 = new int[rows1, columns1];
-int[,] array2 = new int[rows2, columns2];
+//     return array;
+// }
 
-if (array1.GetLength(0) != array2.GetLength(1))
-{
-    Console.WriteLine("Невозможно выполнить умножение.");
-    return;
-}
+// void Show2DArray(int[,] array)
+// {
+//     for(int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for(int j = 0; j < array.GetLength(1); j++)
+//         {
+//             Console.Write(array[i,j] + " ");
+//         }
+//         Console.WriteLine();
+//     }
+//     Console.WriteLine();
+// }
 
-int[,] CreateRandom2DArray()
-{
-    Console.Write("Введите количество строк: ");
-    int rows = Convert.ToInt32(Console.ReadLine());
-    Console.Write("Введите количество столбцов: ");
-    int columns = Convert.ToInt32(Console.ReadLine());
- 
-
-    int[,] array = new int[rows, columns];
-
-    for(int i = 0; i < rows; i++)
-        for(int j = 0; j < columns; j++)
-            array[i,j] = new Random().Next(minValue, maxValue+ 1);
-
-    return array;
-}
-
-
-int[,] resultArray = new int[columns2, rows1];
-
-for (int i = 0; i < array1.GetLength(0); i++)
-{
-    for (int j = 0; j < array2.GetLength(1); j++)
-    {
-        resultArray[i, j] = 0;
-        for (int k = 0; k < array1.GetLength(1); k++)
-        {
-            resultArray[i, j] += array1[i, k] * array2[k, j];
-        }
-    }
-}
-
-
-// FillArrayRandom(array);
-// PrintArray2D(array);
-
+// int[,] firstArray = CreateRandom2DArray();
+// Show2DArray(firstArray);
 // Console.WriteLine();
+// int[,] secondArray = CreateRandom2DArray();
+// Show2DArray(secondArray);
 
-// FillArrayRandom(secondArray);
-// PrintArray2D(secondArray);
-
-// Console.WriteLine();
-// PrintArray2D(resultArray);
-
-
+// int[,] resultArray = new int[firstArray.GetLength(0), secondArray.GetLength(1)];
+// if (firstArray.GetLength(1) != secondArray.GetLength(0))
+// {
+//     Console.WriteLine("Нельзя перемножить ");
+//     return;
+// }
+// else
+// {
+//     for (int i = 0; i < firstArray.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < secondArray.GetLength(1); j++)
+//         {
+//             resultArray[i, j] = 0;
+//             for (int k = 0; k < firstArray.GetLength(1); k++)
+//             {
+//                 resultArray[i, j] += firstArray[i, k] * secondArray[k, j];
+//             }
+//         }
+//     }
+// }
+// Console.WriteLine("Результат перемножения двух матриц: ");
+// Show2DArray(resultArray);
 
 
 
@@ -225,7 +218,7 @@ for (int i = 0; i < array1.GetLength(0); i++)
 
 // int[,,] CreateRandom3DArray()
 // {
-//     Console.Write("Введите длину массив, кол-во элементов по X: ");
+//     Console.Write("Введите длину массивf, кол-во элементов по X: ");
 //     int x = Convert.ToInt32(Console.ReadLine());
 //     Console.Write("Введите ширину массива, кол-во элементов по Y: ");
 //     int y = Convert.ToInt32(Console.ReadLine());
@@ -233,7 +226,6 @@ for (int i = 0; i < array1.GetLength(0); i++)
 //     int z = Convert.ToInt32(Console.ReadLine());
        
 //     int[,,] array = new int[x, y, z];
-
 //     for(int i = 0; i < array.GetLength(0); i++)
 //         for(int j = 0; j < array.GetLength(1); j++)
 //             for(int k = 0; k < array.GetLength(2); k++)  
@@ -256,8 +248,8 @@ for (int i = 0; i < array1.GetLength(0); i++)
 //     }
 // }
 
-// int[,,] newArray = CreateRandom3DArray();
-// Show3DArray(newArray);
+// int[,,] myArray = CreateRandom3DArray();
+// Show3DArray(myArray);
 
 
 // Задача 5. Напишите программу, которая заполнит спирально массив 4 на 4.
@@ -267,7 +259,7 @@ for (int i = 0; i < array1.GetLength(0); i++)
 // 11 16 15 06
 // 10 09 08 07
 
-// void SpiralArray(int[,] array, int n)
+// void ArraySpiral(int[,] array, int n)
 // {
 //     int i = 0;
 //     int j = 0;
@@ -284,7 +276,7 @@ for (int i = 0; i < array1.GetLength(0); i++)
 //     }
 // }
 
-// void PrintArray(int[,] array)
+// void ShowArray(int[,] array)
 // {
 //     for (int i = 0; i < array.GetLength(0); i++)
 //     {
@@ -301,7 +293,8 @@ for (int i = 0; i < array1.GetLength(0); i++)
 //     }
 // }
 
-// int lenght = 4;
-// int[,] array = new int[lenght, lenght];
-// SpiralArray(array, lenght);
-// PrintArray(array);
+// Console.Write("Введите размер массива из учета, что количество строк = количеству столбцов: ");
+// int lenght = Convert.ToInt32(Console.ReadLine());
+// int[,] myArray = new int[lenght, lenght];
+// ArraySpiral(myArray, lenght);
+// ShowArray(myArray);
